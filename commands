@@ -1,0 +1,7 @@
+deploy Prometheus chart:
+$ helm install stable/prometheus-operator --name prometheus-operator --namespace monitoring
+
+port forward Prometheus to our localhost:9090
+$ kubectl port-forward -n monitoring prometheus-prometheus-operator-prometheus-0 9090
+
+Visit http://localhost:9090/targets 
